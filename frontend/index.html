@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Intelligence | LNU</title>
+        <link rel="stylesheet" type="text/css" href="/frontend/css/style.css">
+        </head>
+    <body>
+        <div id="container">
+            <h1>Clustering</h1>
+            <div class="forms">
+                <form id="kmeans" method="post" action="/">
+                    <label for="kmeans">Cluster Algorithm:</label>
+                    <select name="kmeans" id="kmeans">
+                        <option value="kmeans">K-means</option>
+                    </select>
+                </form>
+
+                <form id ="iterationsForm" action="/">
+                    <label for="iterations">Number of Iterations:</label>
+                    <input type="number" name="iterations" id="iterations" value="10">
+                </form>
+
+                <form id="runCluster" action="/">
+                    <button id="goButton">Go</button>
+                </form>
+            </div>
+            <div class="text">
+                Type in '-1' for Number of Iterations to iterate until there are no new assignments made. <br>
+                If you type in a positive integer it will terminate either at the number you have entered or when no new assignments are made, whichever occurs first.<br>
+                Valid values are: -1, 1, 2, 3...
+            </div>
+
+            <div id="clusterDiv"></div>
+                
+        </div>
+    </body>
+    <script src="/frontend/js/main.js"></script>
+</html>
